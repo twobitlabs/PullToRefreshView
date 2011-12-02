@@ -53,6 +53,10 @@ typedef enum {
 @property (nonatomic, readonly) UIScrollView *scrollView;
 @property (nonatomic, assign) id<PullToRefreshViewDelegate> delegate;
 @property (nonatomic, assign) NSTimeInterval timeout;
+@property (nonatomic, retain) UILabel *lastUpdatedLabel;
+@property (nonatomic, retain) UILabel *statusLabel;
+@property (nonatomic, retain) CALayer *arrowImage;
+@property (nonatomic, retain) UIActivityIndicatorView *activityView;
 
 
 - (void)refreshLastUpdatedDate;

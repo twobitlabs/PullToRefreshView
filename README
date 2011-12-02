@@ -30,3 +30,13 @@ To use with a web view:
 To dismiss the view after a certain period, even if finishedLoading isn't called:
     pullToRefreshView.timeout = 5; // 5 seconds
 
+To customize the appearance, edit the statusLabel, lastUpdatedLabel, activityView, and arrowImage properties:
+    pullToRefreshView.statusLabel.textColor = [UIColor whiteColor];
+    pullToRefreshView.statusLabel.shadowColor = [UIColor lightGrayColor];
+    pullToRefreshView.lastUpdatedLabel.textColor = [UIColor whiteColor];
+    pullToRefreshView.lastUpdatedLabel.shadowColor = [UIColor lightGrayColor];
+
+    pullToRefreshView.activityView.color = [UIColor lightGrayColor];
+    
+    pullToRefreshView.arrowImage.contents = (id) [UIImage imageNamed:@"my_arrow"].CGImage;
+
