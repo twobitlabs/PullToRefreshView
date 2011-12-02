@@ -36,10 +36,14 @@
 
 @property (nonatomic, assign) PullToRefreshViewState state;
 
+- (void)startTimer;
+- (void)dismissView;
+
 @end
 
 @implementation PullToRefreshView
 @synthesize delegate, scrollView;
+@synthesize timeout;
 
 - (void)showActivity:(BOOL)shouldShow animated:(BOOL)animated {
     if (shouldShow) [activityView startAnimating];
@@ -163,8 +167,9 @@
 			[self showActivity:YES animated:YES];
             [self setImageFlipped:NO];
             scrollView.contentInset = UIEdgeInsetsMake(60.0f, 0.0f, 0.0f, 0.0f);
+            [self startTimer];
 			break;
-
+            
 		default:
 			break;
 	}
@@ -204,11 +209,29 @@
 
 - (void)finishedLoading {
     if (state == PullToRefreshViewStateLoading) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3f];
-        [self setState:PullToRefreshViewStateNormal];
-        [UIView commitAnimations];
+        [timer invalidate];
+        [self dismissView];
     }
+}
+
+- (void)dismissView {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3f];
+    [self setState:PullToRefreshViewStateNormal];
+    [UIView commitAnimations];    
+}
+
+#pragma mark -
+#pragma mark Timeout
+
+- (void)startTimer {
+    if (self.timeout > 0) {
+        timer = [[NSTimer scheduledTimerWithTimeInterval:self.timeout target:self selector:@selector(timerExpired:) userInfo:nil repeats:NO] retain];
+    }
+}
+
+- (void)timerExpired:(NSTimer*)theTimer {
+    [self dismissView];
 }
 
 #pragma mark -
@@ -221,7 +244,9 @@
     [activityView release];
     [statusLabel release];
     [lastUpdatedLabel release];
-
+    [timer invalidate];
+    [timer release];
+    
     [super dealloc];
 }
 

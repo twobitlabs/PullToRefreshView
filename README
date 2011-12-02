@@ -27,3 +27,6 @@ To use with a web view:
     [pullToRefreshView setDelegate:self];
     [pullToRefreshView.scrollview addSubview:pullToRefreshView];
 
+To dismiss the view after a certain period, even if finishedLoading isn't called:
+    pullToRefreshView.timeout = 5; // 5 seconds
+
