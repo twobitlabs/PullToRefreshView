@@ -42,7 +42,8 @@
 @end
 
 @implementation PullToRefreshView
-@synthesize delegate, scrollView;
+@synthesize delegate;
+@synthesize scrollView;
 @synthesize lastUpdatedLabel, statusLabel, arrowImage, activityView;
 @synthesize timeout;
 
@@ -67,7 +68,7 @@
     CGRect frame = CGRectMake(0.0f, 0.0f - scroll.bounds.size.height, scroll.bounds.size.width, scroll.bounds.size.height);
     
     if ((self = [super initWithFrame:frame])) {
-        scrollView = scroll;
+        self.scrollView = scroll;
         [scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:NULL];
         
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -240,7 +241,7 @@
 
 - (void)dealloc {
 	[scrollView removeObserver:self forKeyPath:@"contentOffset"];
-	
+	[scrollView release];
     [arrowImage release];
     [activityView release];
     [statusLabel release];
