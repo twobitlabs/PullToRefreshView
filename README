@@ -40,3 +40,12 @@ To customize the appearance, edit the statusLabel, lastUpdatedLabel, activityVie
     
     pullToRefreshView.arrowImage.contents = (id) [UIImage imageNamed:@"my_arrow"].CGImage;
 
+To customize the content, edit the pullToRefreshText, releaseToRefreshText, loadingText, and dateFormatter properties:
+    pullToRefreshView.pullToRefreshText = @"Pull up to load more stories...";
+    pullToRefreshView.releaseToRefreshText = @"Release to refresh stories...";
+    pullToRefreshView.loadingText = @"Refreshing stories...";
+    
+    NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.timeStyle = NSDateFormatterNoStyle;
+    pullToRefreshView.dateFormatter = formatter;

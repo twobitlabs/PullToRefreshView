@@ -21,10 +21,17 @@
 
     self.topPull = [[PullToRefreshView alloc] initWithScrollView:self.scrollView];
     [self.topPull setDelegate:self];
+    self.topPull.loadingText = @"Refreshing stories...";
+    NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.timeStyle = NSDateFormatterNoStyle;
+    self.topPull.dateFormatter = formatter;
+
     [self.scrollView addSubview:self.topPull];
 
     self.bottomPull = [[PullToRefreshView alloc] initWithScrollView:self.scrollView atBottom:YES];
     [self.bottomPull setDelegate:self];
+    self.bottomPull.loadingText = @"Loading more stories...";
     [self.scrollView addSubview:self.bottomPull];    
 }
 

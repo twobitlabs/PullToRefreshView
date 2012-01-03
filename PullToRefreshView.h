@@ -48,6 +48,8 @@ typedef enum {
 	UILabel *statusLabel;
 	CALayer *arrowImage;
 	UIActivityIndicatorView *activityView;
+    
+    NSDateFormatter *dateFormatter;
 }
 
 @property (nonatomic, retain) UIScrollView *scrollView;
@@ -58,6 +60,10 @@ typedef enum {
 @property (nonatomic, retain) CALayer *arrowImage;
 @property (nonatomic, retain) UIActivityIndicatorView *activityView;
 @property (assign, readonly) BOOL isBottom;
+@property (nonatomic, copy) NSString *pullToRefreshText;
+@property (nonatomic, copy) NSString *releaseToRefreshText;
+@property (nonatomic, copy) NSString *loadingText;
+@property (readwrite, nonatomic, retain) NSDateFormatter *dateFormatter;
 
 
 - (void)refreshLastUpdatedDate;

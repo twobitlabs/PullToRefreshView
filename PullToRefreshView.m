@@ -51,6 +51,7 @@
 @synthesize lastUpdatedLabel, statusLabel, arrowImage, activityView;
 @synthesize timeout;
 @synthesize isBottom;
+@synthesize pullToRefreshText, releaseToRefreshText, loadingText;
 
 static const CGFloat kViewHeight = 60.0f;
 static const CGFloat kScrollLimit = 65.0f;
@@ -151,18 +152,36 @@ static const CGFloat kScrollLimit = 65.0f;
 #pragma mark -
 #pragma mark Setters
 
+- (NSDateFormatter *)dateFormatter {
+    static NSDateFormatter *defaultFormatter;
+
+    if (dateFormatter) {
+        return dateFormatter;
+    } else if (!defaultFormatter) {
+        defaultFormatter = [[NSDateFormatter alloc] init];
+        [defaultFormatter setAMSymbol:@"AM"];
+        [defaultFormatter setPMSymbol:@"PM"];
+        [defaultFormatter setDateFormat:@"MM/dd/yy hh:mm a"];
+    }
+
+    return defaultFormatter;
+}
+
+- (void)setDateFormatter:(NSDateFormatter *)formatter {
+    if (dateFormatter != formatter) {
+        [dateFormatter release];
+        dateFormatter = [formatter retain];
+        [self refreshLastUpdatedDate];
+    }
+}
+
 - (void)refreshLastUpdatedDate {
     NSDate *date = [NSDate date];
     
 	if ([delegate respondsToSelector:@selector(pullToRefreshViewLastUpdated:)])
 		date = [delegate pullToRefreshViewLastUpdated:self];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setAMSymbol:@"AM"];
-    [formatter setPMSymbol:@"PM"];
-    [formatter setDateFormat:@"MM/dd/yy hh:mm a"];
-    self.lastUpdatedLabel.text = [NSString stringWithFormat:@"Last Updated: %@", [formatter stringFromDate:date]];
-    [formatter release];
+    self.lastUpdatedLabel.text = [NSString stringWithFormat:@"Last Updated: %@", [[self dateFormatter] stringFromDate:date]];
 }
 
 - (void)setState:(PullToRefreshViewState)state_ {
@@ -170,20 +189,21 @@ static const CGFloat kScrollLimit = 65.0f;
     
 	switch (state) {
 		case PullToRefreshViewStateReady:
-			self.statusLabel.text = @"Release to refresh...";
+			self.statusLabel.text = self.releaseToRefreshText ? self.releaseToRefreshText : @"Release to refresh...";
 			[self showActivity:NO animated:NO];
             [self setImageFlipped:YES];
 			break;
             
 		case PullToRefreshViewStateNormal:
-			self.statusLabel.text = [NSString stringWithFormat:@"Pull %@ to refresh...", isBottom ? @"up" : @"down"];
+			self.statusLabel.text = self.pullToRefreshText ? self.pullToRefreshText :
+                [NSString stringWithFormat:@"Pull %@ to refresh...", isBottom ? @"up" : @"down"];
 			[self showActivity:NO animated:NO];
             [self setImageFlipped:NO];
 			[self refreshLastUpdatedDate];
 			break;
             
 		case PullToRefreshViewStateLoading:
-			self.statusLabel.text = @"Loading...";
+			self.statusLabel.text = self.loadingText ? self.loadingText : @"Loading...";
 			[self showActivity:YES animated:YES];
             [self setImageFlipped:NO];
             [self parkVisible];
@@ -316,7 +336,10 @@ static const CGFloat kScrollLimit = 65.0f;
     [lastUpdatedLabel release];
     [timer invalidate];
     [timer release];
-    
+    [pullToRefreshText release];
+    [releaseToRefreshText release];
+    [loadingText release];
+    [dateFormatter release];
     [super dealloc];
 }
 
