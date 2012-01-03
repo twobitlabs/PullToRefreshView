@@ -90,6 +90,7 @@ static const CGFloat kScrollLimit = 65.0f;
         isBottom = atBottom;
         self.scrollView = scroll;
         [scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:NULL];
+        [scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:NULL];
         
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.backgroundColor = [UIColor colorWithRed:226.0/255.0 green:231.0/255.0 blue:237.0/255.0 alpha:1.0];
@@ -147,6 +148,12 @@ static const CGFloat kScrollLimit = 65.0f;
         }
     }    
     return [self initWithScrollView:currentScrollView atBottom:atBottom];
+}
+
+- (void)updatePosition {
+    if (isBottom) {
+        self.frame = CGRectMake(0.0f, self.scrollView.contentSize.height, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+    }
 }
 
 #pragma mark -
@@ -293,6 +300,8 @@ static const CGFloat kScrollLimit = 65.0f;
                     [delegate pullToRefreshViewShouldRefresh:self];
             }
         }
+    } else if ([keyPath isEqualToString:@"contentSize"]) {
+        [self updatePosition];
     }
 }
 
@@ -329,6 +338,7 @@ static const CGFloat kScrollLimit = 65.0f;
 
 - (void)dealloc {
 	[scrollView removeObserver:self forKeyPath:@"contentOffset"];
+	[scrollView removeObserver:self forKeyPath:@"contentSize"];
 	[scrollView release];
     [arrowImage release];
     [activityView release];

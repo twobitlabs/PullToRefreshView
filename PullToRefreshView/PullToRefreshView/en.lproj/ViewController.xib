@@ -96,7 +96,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{57, 211}, {208, 37}}</string>
 								<reference key="NSSuperview" ref="1016583224"/>
-								<reference key="NSNextKeyView" ref="77952817"/>
+								<reference key="NSNextKeyView" ref="631923911"/>
 								<string key="NSReuseIdentifierKey">_NS:225</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -161,6 +161,28 @@
 								<int key="IBUIContentVerticalAlignment">0</int>
 								<int key="IBUIButtonType">1</int>
 								<string key="IBUINormalTitle">Tap to finish loading bottom</string>
+								<reference key="IBUIHighlightedTitleColor" ref="905454287"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="157889243"/>
+								<reference key="IBUIFontDescription" ref="680852631"/>
+								<reference key="IBUIFont" ref="227969696"/>
+							</object>
+							<object class="IBUIButton" id="631923911">
+								<reference key="NSNextResponder" ref="1016583224"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{64, 256}, {193, 37}}</string>
+								<reference key="NSSuperview" ref="1016583224"/>
+								<reference key="NSNextKeyView" ref="77952817"/>
+								<string key="NSReuseIdentifierKey">_NS:225</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">Make contentSize taller</string>
 								<reference key="IBUIHighlightedTitleColor" ref="905454287"/>
 								<object class="NSColor" key="IBUINormalTitleColor">
 									<int key="NSColorSpace">1</int>
@@ -244,6 +266,15 @@
 					</object>
 					<int key="connectionID">17</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">didTapMakeContentSizeTaller:</string>
+						<reference key="source" ref="631923911"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">19</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -281,6 +312,7 @@
 							<reference ref="4623693"/>
 							<reference ref="928954653"/>
 							<reference ref="77952817"/>
+							<reference ref="631923911"/>
 						</array>
 						<reference key="parent" ref="774585933"/>
 					</object>
@@ -309,6 +341,11 @@
 						<reference key="object" ref="77952817"/>
 						<reference key="parent" ref="1016583224"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">18</int>
+						<reference key="object" ref="631923911"/>
+						<reference key="parent" ref="1016583224"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -320,6 +357,7 @@
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="18.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -328,7 +366,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">17</int>
+			<int key="maxID">19</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

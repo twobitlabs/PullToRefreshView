@@ -53,6 +53,10 @@
     [self.bottomPull finishedLoading];
 }
 
+-(IBAction)didTapMakeContentSizeTaller:(id)sender {
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.contentSize.width, self.scrollView.contentSize.height + 20);
+}
+
 #pragma mark -
 #pragma mark PullToRefreshViewDelegate
 
