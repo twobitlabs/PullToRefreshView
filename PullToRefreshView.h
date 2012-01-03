@@ -57,13 +57,16 @@ typedef enum {
 @property (nonatomic, retain) UILabel *statusLabel;
 @property (nonatomic, retain) CALayer *arrowImage;
 @property (nonatomic, retain) UIActivityIndicatorView *activityView;
+@property (assign, readonly) BOOL isBottom;
 
 
 - (void)refreshLastUpdatedDate;
 - (void)finishedLoading;
 
-- (id)initWithScrollView:(UIScrollView *)scrollView;
+- (id)initWithScrollView:(UIScrollView *)scroll;
 - (id)initWithWebView:(UIWebView *)webView;
+- (id)initWithScrollView:(UIScrollView *)scroll atBottom:(BOOL)isBottom;
+- (id)initWithWebView:(UIWebView *)webView atBottom:(BOOL)isBottom;
 
 @end
 

@@ -38,6 +38,10 @@
 
 - (void)startTimer;
 - (void)dismissView;
+- (BOOL)isScrolledToVisible;
+- (BOOL)isScrolledToLimit;
+- (void)parkVisible;
+- (void)hide;
 
 @end
 
@@ -46,6 +50,10 @@
 @synthesize scrollView;
 @synthesize lastUpdatedLabel, statusLabel, arrowImage, activityView;
 @synthesize timeout;
+@synthesize isBottom;
+
+static const CGFloat kViewHeight = 60.0f;
+static const CGFloat kScrollLimit = 65.0f;
 
 - (void)showActivity:(BOOL)shouldShow animated:(BOOL)animated {
     if (shouldShow) [self.activityView startAnimating];
@@ -65,16 +73,27 @@
 }
 
 - (id)initWithScrollView:(UIScrollView *)scroll {
-    CGRect frame = CGRectMake(0.0f, 0.0f - scroll.bounds.size.height, scroll.bounds.size.width, scroll.bounds.size.height);
+    return [self initWithScrollView:scroll atBottom:NO];
+}
+
+- (id)initWithWebView:(UIWebView *)webView {
+    return [self initWithWebView:webView atBottom:NO];
+}
+
+- (id)initWithScrollView:(UIScrollView *)scroll atBottom:(BOOL)atBottom {
+    CGFloat offset = atBottom ? scroll.contentSize.height : 0.0f - scroll.bounds.size.height;
+    CGRect frame = CGRectMake(0.0f, offset, scroll.bounds.size.width, scroll.bounds.size.height);
     
     if ((self = [super initWithFrame:frame])) {
+        CGFloat visibleBottom = atBottom ? kViewHeight : self.frame.size.height;
+        isBottom = atBottom;
         self.scrollView = scroll;
         [scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:NULL];
         
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.backgroundColor = [UIColor colorWithRed:226.0/255.0 green:231.0/255.0 blue:237.0/255.0 alpha:1.0];
         
-		self.lastUpdatedLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0f, frame.size.height - 30.0f, self.frame.size.width, 20.0f)] autorelease];
+		self.lastUpdatedLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0f, visibleBottom - 30.0f, self.frame.size.width, 20.0f)] autorelease];
 		self.lastUpdatedLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.lastUpdatedLabel.font = [UIFont systemFontOfSize:12.0f];
 		self.lastUpdatedLabel.textColor = TEXT_COLOR;
@@ -84,7 +103,7 @@
 		self.lastUpdatedLabel.textAlignment = UITextAlignmentCenter;
 		[self addSubview:self.lastUpdatedLabel];
         
-		self.statusLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0f, frame.size.height - 48.0f, self.frame.size.width, 20.0f)] autorelease];
+		self.statusLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0f, visibleBottom - 48.0f, self.frame.size.width, 20.0f)] autorelease];
 		self.statusLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.statusLabel.font = [UIFont boldSystemFontOfSize:13.0f];
 		self.statusLabel.textColor = TEXT_COLOR;
@@ -95,9 +114,10 @@
 		[self addSubview:self.statusLabel];
         
 		self.arrowImage = [[[CALayer alloc] init] autorelease];
-		self.arrowImage.frame = CGRectMake(25.0f, frame.size.height - 60.0f, 24.0f, 52.0f);
+        UIImage *arrow = [UIImage imageNamed:@"arrow"];
+		self.arrowImage.contents = (id) arrow.CGImage;
+		self.arrowImage.frame = CGRectMake(25.0f, visibleBottom - kViewHeight + 5.0f, arrow.size.width, arrow.size.height);
 		self.arrowImage.contentsGravity = kCAGravityResizeAspect;
-		self.arrowImage.contents = (id) [UIImage imageNamed:@"arrow"].CGImage;
         
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 40000
 		if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
@@ -108,16 +128,16 @@
 		[self.layer addSublayer:self.arrowImage];
         
         self.activityView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
-		self.activityView.frame = CGRectMake(30.0f, frame.size.height - 38.0f, 20.0f, 20.0f);
+		self.activityView.frame = CGRectMake(30.0f, visibleBottom - 38.0f, 20.0f, 20.0f);
 		[self addSubview:self.activityView];
         
 		[self setState:PullToRefreshViewStateNormal];
     }
     
-    return self;
+    return self;     
 }
 
-- (id)initWithWebView:(UIWebView *)webView {
+- (id)initWithWebView:(UIWebView *)webView atBottom:(BOOL)atBottom {
     UIScrollView *currentScrollView = nil;
     for (UIView *subView in webView.subviews) {
         if ([subView isKindOfClass:[UIScrollView class]]) {
@@ -125,7 +145,7 @@
             break;
         }
     }    
-    return [self initWithScrollView:currentScrollView];
+    return [self initWithScrollView:currentScrollView atBottom:atBottom];
 }
 
 #pragma mark -
@@ -153,22 +173,20 @@
 			self.statusLabel.text = @"Release to refresh...";
 			[self showActivity:NO animated:NO];
             [self setImageFlipped:YES];
-            scrollView.contentInset = UIEdgeInsetsZero;
 			break;
             
 		case PullToRefreshViewStateNormal:
-			self.statusLabel.text = @"Pull down to refresh...";
+			self.statusLabel.text = [NSString stringWithFormat:@"Pull %@ to refresh...", isBottom ? @"up" : @"down"];
 			[self showActivity:NO animated:NO];
             [self setImageFlipped:NO];
 			[self refreshLastUpdatedDate];
-            scrollView.contentInset = UIEdgeInsetsZero;
 			break;
             
 		case PullToRefreshViewStateLoading:
 			self.statusLabel.text = @"Loading...";
 			[self showActivity:YES animated:YES];
             [self setImageFlipped:NO];
-            scrollView.contentInset = UIEdgeInsetsMake(60.0f, 0.0f, 0.0f, 0.0f);
+            [self parkVisible];
             [self startTimer];
 			break;
             
@@ -180,20 +198,69 @@
 #pragma mark -
 #pragma mark UIScrollView
 
+- (BOOL)isScrolledToVisible {
+    if (isBottom) {
+        BOOL scrolledBelowContent = scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.size.height);
+        return scrolledBelowContent && ![self isScrolledToLimit];
+    } else {
+        BOOL scrolledAboveContent = scrollView.contentOffset.y < 0.0f;
+        return scrolledAboveContent && ![self isScrolledToLimit];
+    }
+}
+
+- (BOOL)isScrolledToLimit {
+    if (isBottom) {
+        return scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) + kScrollLimit;
+    } else {
+        return scrollView.contentOffset.y <= -kScrollLimit;
+    }
+}
+
+- (void)parkVisible {
+    if (isBottom) {
+        scrollView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, kViewHeight, 0.0f);
+    } else {
+        scrollView.contentInset = UIEdgeInsetsMake(kViewHeight, 0.0f, 0.0f, 0.0f);
+    }
+}
+
+- (void)hide {
+    if (isBottom) {
+        scrollView.contentInset = UIEdgeInsetsMake(scrollView.contentInset.top, 0.0f, 0.0f, 0.0f);
+    } else {
+        scrollView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, scrollView.contentInset.bottom, 0.0f);
+    }
+}
+
+- (void)handleDragWhileLoading {
+    if ([self isScrolledToLimit] || [self isScrolledToVisible]) {
+        // allow scrolled portion of view to display
+        if (isBottom) {
+            CGFloat visiblePortion = scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.size.height);
+            scrollView.contentInset = UIEdgeInsetsMake(0, 0, MIN(visiblePortion, kViewHeight), 0);
+        } else {
+            scrollView.contentInset = UIEdgeInsetsMake(MIN(-scrollView.contentOffset.y, kViewHeight), 0, 0, 0);
+        }
+    }    
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"contentOffset"]) {
         if (scrollView.isDragging) {
             if (state == PullToRefreshViewStateReady) {
-                if (scrollView.contentOffset.y > -65.0f && scrollView.contentOffset.y < 0.0f) 
+                if ([self isScrolledToVisible]) {
+                    NSLog(@"scrolled to visible: %@", isBottom ? @"bottom" : @"top");
+                    // dragging from "release to refresh" back down (didn't release at top)
                     [self setState:PullToRefreshViewStateNormal];
+                }
             } else if (state == PullToRefreshViewStateNormal) {
-                if (scrollView.contentOffset.y < -65.0f)
+                // hit the upper limit, change to "release to refresh"
+                if ([self isScrolledToLimit]) {
+                    NSLog(@"scrolled to limit: %@", isBottom ? @"bottom" : @"top");
                     [self setState:PullToRefreshViewStateReady];
+                }
             } else if (state == PullToRefreshViewStateLoading) {
-                if (scrollView.contentOffset.y >= 0)
-                    scrollView.contentInset = UIEdgeInsetsZero;
-                else
-                    scrollView.contentInset = UIEdgeInsetsMake(MIN(-scrollView.contentOffset.y, 60.0f), 0, 0, 0);
+                [self handleDragWhileLoading];
             }
         } else {
             if (state == PullToRefreshViewStateReady) {
@@ -220,6 +287,7 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3f];
     [self setState:PullToRefreshViewStateNormal];
+    [self hide];
     [UIView commitAnimations];    
 }
 

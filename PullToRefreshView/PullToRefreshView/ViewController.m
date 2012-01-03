@@ -15,17 +15,17 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
+    // make area scrollable
+    self.scrollView.contentSize = CGSizeMake(320, 540);
+
     self.topPull = [[PullToRefreshView alloc] initWithScrollView:self.scrollView];
     [self.topPull setDelegate:self];
     [self.scrollView addSubview:self.topPull];
-    
-    self.bottomPull = [[PullToRefreshView alloc] initWithScrollView:self.scrollView];
-    self.bottomPull.isBottom = YES;
+
+    self.bottomPull = [[PullToRefreshView alloc] initWithScrollView:self.scrollView atBottom:YES];
     [self.bottomPull setDelegate:self];
-    [self.scrollView addSubview:self.bottomPull];
-    
-    // make area scrollable
-    self.scrollView.contentSize = CGSizeMake(320, 481);
+    [self.scrollView addSubview:self.bottomPull];    
 }
 
 -(void)viewDidUnload {
@@ -35,6 +35,14 @@
 
 -(IBAction)didTapFinishedLoading:(id)sender {
     [self.topPull finishedLoading];
+    [self.bottomPull finishedLoading];
+}
+
+-(IBAction)didTapFinishLoadingTop:(id)sender {
+    [self.topPull finishedLoading];
+}
+
+-(IBAction)didTapFinishLoadingBottom:(id)sender {
     [self.bottomPull finishedLoading];
 }
 

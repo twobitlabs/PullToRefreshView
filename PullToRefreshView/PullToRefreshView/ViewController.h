@@ -16,5 +16,7 @@
 @property(assign)PullToRefreshView *bottomPull;
 
 -(IBAction)didTapFinishedLoading:(id)sender;
+- (IBAction)didTapFinishLoadingTop:(id)sender;
+- (IBAction)didTapFinishLoadingBottom:(id)sender;
 
 @end
