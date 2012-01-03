@@ -1,324 +1,0 @@
-TPullToRefreshView
-v4
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/Info.plist PullToRefreshView/PullToRefreshView-Info.plist
-cProcessPCH /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch.pth PullToRefreshView/PullToRefreshView-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/ViewController.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/main.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/AppDelegate.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView normal i386
-cGenerateDSYMFile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app.dSYM /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView
-cCompileXIB /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/ViewController.xib
-cCopyStringsFile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj/InfoPlist.strings PullToRefreshView/en.lproj/InfoPlist.strings
-cCpResource PullToRefreshView/../../arrow.png build/Debug-iphonesimulator/PullToRefreshView.app/arrow.png
-cCpResource PullToRefreshView/../../arrow@2x.png build/Debug-iphonesimulator/PullToRefreshView.app/arrow@2x.png
-cTouch /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
-c000000004ED7EA560000000000000110
-t1322773078
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004E72F1CC0000000000245480
-t1316155852
-s2380928
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004E72F2960000000000353830
-t1316156054
-s3487792
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-c000000004E72F69C00000000001A9D20
-t1316157084
-s1744160
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004E7806AB00000000008F7390
-t1316488875
-s9401232
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.h
-c000000004F01F5240000000000000A3E
-t1325528356
-s2622
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.m
-c000000004F01F5300000000000002610
-t1325528368
-s9744
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../arrow.png
-c000000004ED907530000000000000FE9
-t1322846035
-s4073
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../arrow@2x.png
-c000000004ED907530000000000001601
-t1322846035
-s5633
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.h
-c000000004EEF789D0000000000000181
-t1324316829
-s385
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m
-c000000004EEF78D90000000000000394
-t1324316889
-s916
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/PullToRefreshView-Prefix.pch
-c000000004EEF789D0000000000000151
-t1324316829
-s337
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.h
-c000000004F01F61000000000000001E5
-t1325528592
-s485
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m
-c000000004F02037400000000000004B8
-t1325532020
-s1208
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/InfoPlist.strings
-c000000004EEF789D000000000000002D
-t1324316829
-s45
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/ViewController.xib
-c000000004F0202E20000000000002E2C
-t1325531874
-s11820
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.m
-c000000004EEF789D0000000000000165
-t1324316829
-s357
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app
-t1325531876
-s272
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app.dSYM
-t1325531875
-s102
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/Info.plist
-t1325528675
-s869
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PkgInfo
-t1325528675
-s8
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView
-t1325531875
-s42000
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/arrow.png
-t1325528775
-s4073
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/arrow@2x.png
-t1325528775
-s5633
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj/InfoPlist.strings
-t1325528775
-s42
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj/ViewController.nib
-t1325531876
-s2242
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/AppDelegate.o
-t1325528680
-s50804
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.LinkFileList
-c000000004F01F66300000000000002B2
-t1325528675
-s690
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.o
-t1325528680
-s73392
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/ViewController.o
-t1325531875
-s47932
-
-N/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/main.o
-t1325528680
-s2652
-
-N/var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch.pth
-t1325528679
-s3907768
-
-NPullToRefreshView/PullToRefreshView-Info.plist
-c000000004EEF789D00000000000004BC
-t1324316829
-s1212
-
-CBuild AST from /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.m
-r0
-
-CBuild AST from /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m
-r0
-
-CBuild AST from /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m
-r0
-
-CBuild AST from /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.m
-r0
-
-CCheck dependencies
-r0
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesda71e3f43ab2b441^834df5f43ab2b441^---0#1#0#--18"Check dependencies36"E8126570-14E1-4316-8116-72AA24366D87-
-
-CCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/AppDelegate.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s347221479.657416
-e347221480.188232
-r1
-xCompileC
-xbuild/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/AppDelegate.o
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m2270a8e72db2b441^c23030e82db2b441^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m0000000000000000^3183"CompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/AppDelegate.o PullToRefreshView/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-generated-files.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-own-target-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-all-target-headers.hmap -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-project-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/include -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources/i386 -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources -F/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator -include /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch -MMD -MT dependencies -MF /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/AppDelegate.d -c /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/AppDelegate.m -o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/AppDelegate.o36"B2A0E372-99A0-4682-8DBF-64B8CFD172BA-
-
-CCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s347221479.657471
-e347221480.214527
-r1
-xCompileC
-xbuild/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.o
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.mca70a8e72db2b441^1ceb36e82db2b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.m0000000000000000^3225"CompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.o PullToRefreshView/../../PullToRefreshView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-generated-files.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-own-target-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-all-target-headers.hmap -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-project-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/include -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources/i386 -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources -F/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator -include /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch -MMD -MT dependencies -MF /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.d -c /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../PullToRefreshView.m -o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.o36"DCAEA975-7054-442C-9E9B-0EE4523E4293-
-
-CCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/ViewController.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s347224820.978254
-e347224821.068342
-r1
-xCompileC
-xbuild/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/ViewController.o
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m6e87faf43ab2b441^7c8111f53ab2b441^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m0000000000000000^3198"CompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/ViewController.o PullToRefreshView/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-generated-files.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-own-target-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-all-target-headers.hmap -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-project-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/include -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources/i386 -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources -F/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator -include /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch -MMD -MT dependencies -MF /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/ViewController.d -c /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/ViewController.m -o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/ViewController.o36"51E6FA31-A35A-4070-9ECE-A0E7EDBD3A90-
-
-CCompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/main.o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s347221479.657394
-e347221480.185384
-r1
-xCompileC
-xbuild/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/main.o
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.mfe64a8e72db2b441^97752fe82db2b441^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.m0000000000000000^3148"CompileC build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/main.o PullToRefreshView/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-generated-files.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-own-target-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-all-target-headers.hmap -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-project-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/include -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources/i386 -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources -F/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator -include /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch -MMD -MT dependencies -MF /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/main.d -c /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/main.m -o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/main.o36"13EF168C-7662-42CA-8656-F685C1C6CE51-
-
-CCompileXIB /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/ViewController.xib
-s347224675.881067
-e347224676.190991
-r1
-xCompileXIB
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/ViewController.xib
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compiling /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/ViewController.xib48a4e1633ab2b441^c5e530643ab2b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/ViewController.xib0000000000000000^808"CompileXIB PullToRefreshView/en.lproj/ViewController.xib    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj/ViewController.nib /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/ViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"DCEDD5D4-6AF3-45F5-934B-82ADC4029741-
-
-CCopyStringsFile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj/InfoPlist.strings PullToRefreshView/en.lproj/InfoPlist.strings
-s347221575.929407
-e347221575.977271
-r1
-xCopyStringsFile
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj/InfoPlist.strings
-xPullToRefreshView/en.lproj/InfoPlist.strings
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy PullToRefreshView/en.lproj/InfoPlist.strings8a01ee472eb2b441^d940fa472eb2b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/en.lproj/InfoPlist.strings0000000000000000^597"CopyStringsFile build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj/InfoPlist.strings PullToRefreshView/en.lproj/InfoPlist.strings    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/en.lproj -- PullToRefreshView/en.lproj/InfoPlist.strings36"0C485A2E-E14B-4080-899E-C7770CB42E13-
-
-CCpResource PullToRefreshView/../../arrow.png build/Debug-iphonesimulator/PullToRefreshView.app/arrow.png
-s347221575.929766
-e347221575.977212
-r1
-xCpResource
-xPullToRefreshView/../../arrow.png
-xbuild/Debug-iphonesimulator/PullToRefreshView.app/arrow.png
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Debug-iphonesimulator/PullToRefreshView.app/arrow.png9416ee472eb2b441^f52afa472eb2b441^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/arrow.png00f42871deffdf42^625"CpResource PullToRefreshView/../../arrow.png build/Debug-iphonesimulator/PullToRefreshView.app/arrow.png    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../arrow.png /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app36"D20F94F6-EEC6-429A-B9E4-5BE69B312914-
-
-CCpResource PullToRefreshView/../../arrow@2x.png build/Debug-iphonesimulator/PullToRefreshView.app/arrow@2x.png
-s347221575.929957
-e347221575.977239
-r1
-xCpResource
-xPullToRefreshView/../../arrow@2x.png
-xbuild/Debug-iphonesimulator/PullToRefreshView.app/arrow@2x.png
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug-iphonesimulator/PullToRefreshView.app/arrow@2x.png931eee472eb2b441^f033fa472eb2b441^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/arrow@2x.png00f42871deffdf42^640"CpResource "PullToRefreshView/../../arrow@2x.png" "build/Debug-iphonesimulator/PullToRefreshView.app/arrow@2x.png"    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/../../arrow@2x.png" /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app36"6897FD80-2A50-46F0-8AB6-065E1180157F-
-
-CGenerateDSYMFile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app.dSYM /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView
-s347224821.109881
-e347224821.331148
-r1
-xGenerateDSYMFile
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app.dSYM
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Generating /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app.dSYM772e1cf53ab2b441^dac554f53ab2b441^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app.dSYM/0000000000000000^622"GenerateDSYMFile build/Debug-iphonesimulator/PullToRefreshView.app.dSYM build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView -o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app.dSYM36"42C61F54-AA8D-4A61-BE67-AA6B5D63A494-
-
-CLd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView normal i386
-s347224821.075209
-e347224821.103231
-r1
-xLd
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView
-xnormal
-xi386
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection134"Link /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView055113f53ab2b441^226e1af53ab2b441^---0#0#0#--1238"Ld build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView normal i386    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator -F/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator -filelist /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/Objects-normal/i386/PullToRefreshView.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 -framework UIKit -framework Foundation -framework CoreGraphics -framework QuartzCore -o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PullToRefreshView36"33386DF6-5216-4643-807F-199F33B71F8E-
-
-CProcessInfoPlistFile /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/Info.plist PullToRefreshView/PullToRefreshView-Info.plist
-s347221475.627300
-e347221475.631185
-r1
-xProcessInfoPlistFile
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/Info.plist
-xPullToRefreshView/PullToRefreshView-Info.plist
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Process PullToRefreshView/PullToRefreshView-Info.plist09dea0e32db2b441^7fbea1e32db2b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/PullToRefreshView-Info.plist0000000000000000^725"ProcessInfoPlistFile build/Debug-iphonesimulator/PullToRefreshView.app/Info.plist PullToRefreshView/PullToRefreshView-Info.plist    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility PullToRefreshView/PullToRefreshView-Info.plist -genpkginfo /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app/Info.plist36"DC5FECCB-B4DD-4727-82F9-BABA3D6259A7-
-
-CProcessPCH /Users/cpickslay/Library/Developer/Xcode/DerivedData/PullToRefreshView-azgbbakxfeacyogssxdluplfbvvx/Index/PrecompiledHeaders/PullToRefreshView-Prefix-clvlutsadolrnycusydjzdxmldrq_ast/PullToRefreshView-Prefix.pch.pth PullToRefreshView/PullToRefreshView-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch.pth PullToRefreshView/PullToRefreshView-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s347221475.639835
-e347221479.649151
-r1
-xProcessPCH
-x/var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch.pth
-xPullToRefreshView/PullToRefreshView-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Precompile PullToRefreshView/PullToRefreshView-Prefix.pch56f4a3e32db2b441^cf2fa6e72db2b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/PullToRefreshView-Prefix.pch0000000000000000^3123"ProcessPCH /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch.pth PullToRefreshView/PullToRefreshView-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-generated-files.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-own-target-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-all-target-headers.hmap -iquote /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/PullToRefreshView-project-headers.hmap -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/include -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources/i386 -I/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/PullToRefreshView.build/Debug-iphonesimulator/PullToRefreshView.build/DerivedSources -F/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator -c /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/PullToRefreshView/PullToRefreshView-Prefix.pch -o /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/sv/c2l0b3qd411_vpcz67dzsydm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/PullToRefreshView-Prefix-cylvsyuitqwdrmbtlfwgywhciwch/PullToRefreshView-Prefix.pch.d36"EDF7C7E4-E4B5-4677-8466-9684376236DF-
-
-CTouch /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app
-s347224821.354144
-e347224821.404418
-r1
-xTouch
-x/Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Touch /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app85b45af53ab2b441^488b67f53ab2b441^---0#0#0#--390"Touch build/Debug-iphonesimulator/PullToRefreshView.app    cd /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/cpickslay/projects/PullToRefreshView/PullToRefreshView/build/Debug-iphonesimulator/PullToRefreshView.app36"27E6F2BF-E6B2-49CD-BE3C-9915955417E4-
-
