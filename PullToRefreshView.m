@@ -69,7 +69,7 @@ static const CGFloat kScrollLimit = 65.0f;
 - (void)setImageFlipped:(BOOL)flipped {
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.1f];
-    self.arrowImage.transform = (flipped ? CATransform3DMakeRotation(M_PI * 2, 0.0f, 0.0f, 1.0f) : CATransform3DMakeRotation(M_PI, 0.0f, 0.0f, 1.0f));
+    self.arrowImage.transform = (flipped ^ isBottom ? CATransform3DMakeRotation(M_PI * 2, 0.0f, 0.0f, 1.0f) : CATransform3DMakeRotation(M_PI, 0.0f, 0.0f, 1.0f));
     [UIView commitAnimations];
 }
 
@@ -120,6 +120,7 @@ static const CGFloat kScrollLimit = 65.0f;
 		self.arrowImage.contents = (id) arrow.CGImage;
 		self.arrowImage.frame = CGRectMake(25.0f, visibleBottom - kViewHeight + 5.0f, arrow.size.width, arrow.size.height);
 		self.arrowImage.contentsGravity = kCAGravityResizeAspect;
+        [self setImageFlipped:NO];
         
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 40000
 		if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
