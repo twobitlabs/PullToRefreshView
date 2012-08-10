@@ -335,18 +335,31 @@ static const CGFloat kScrollLimit = 65.0f;
 }
 
 #pragma mark -
-#pragma mark Dealloc
+#pragma mark Cleanup
 
-- (void)dealloc {
+/**
+ * Since PTRV retains its parent scrollview you have to explicitly call cleanup to get it to release
+ */
+- (void)cleanUp {
+    delegate = nil;
+    [timer invalidate];
+    [timer release];
+    timer = nil;
 	[scrollView removeObserver:self forKeyPath:@"contentOffset"];
 	[scrollView removeObserver:self forKeyPath:@"contentSize"];
 	[scrollView release];
+    scrollView = nil;
+}
+
+#pragma mark -
+#pragma mark Dealloc
+  
+- (void)dealloc {
+    [self cleanUp];
     [arrowImage release];
     [activityView release];
     [statusLabel release];
     [lastUpdatedLabel release];
-    [timer invalidate];
-    [timer release];
     [pullToRefreshText release];
     [releaseToRefreshText release];
     [loadingText release];

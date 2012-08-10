@@ -73,6 +73,7 @@ typedef enum {
 - (id)initWithWebView:(UIWebView *)webView;
 - (id)initWithScrollView:(UIScrollView *)scroll atBottom:(BOOL)isBottom;
 - (id)initWithWebView:(UIWebView *)webView atBottom:(BOOL)isBottom;
+- (void)cleanUp;
 
 @end
 
