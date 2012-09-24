@@ -52,7 +52,7 @@ typedef enum {
     NSDateFormatter *dateFormatter;
 }
 
-@property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, assign) UIScrollView *scrollView;
 @property (nonatomic, assign) id<PullToRefreshViewDelegate> delegate;
 @property (nonatomic, assign) NSTimeInterval timeout;
 @property (nonatomic, retain) UILabel *lastUpdatedLabel;
@@ -73,7 +73,6 @@ typedef enum {
 - (id)initWithWebView:(UIWebView *)webView;
 - (id)initWithScrollView:(UIScrollView *)scroll atBottom:(BOOL)isBottom;
 - (id)initWithWebView:(UIWebView *)webView atBottom:(BOOL)isBottom;
-- (void)cleanUp;
 
 @end
 
