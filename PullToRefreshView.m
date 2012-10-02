@@ -337,9 +337,6 @@ static const CGFloat kScrollLimit = 65.0f;
 #pragma mark -
 #pragma mark Lifecycle
 
-/**
- * Since PTRV retains its parent scrollview you have to explicitly call cleanup to get it to release
- */
 -(void)removeFromSuperview {
     [super removeFromSuperview];
     delegate = nil;    
