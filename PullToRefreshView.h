@@ -38,21 +38,11 @@ typedef enum {
 @protocol PullToRefreshViewDelegate;
 
 @interface PullToRefreshView : UIView {
-	id<PullToRefreshViewDelegate> delegate;
-    UIScrollView *scrollView;
 	PullToRefreshViewState state;
-    
-    NSTimer *timer;
-    
-	UILabel *lastUpdatedLabel;
-	UILabel *statusLabel;
-	CALayer *arrowImage;
-	UIActivityIndicatorView *activityView;
-    
-    NSDateFormatter *dateFormatter;
 }
 
 @property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) NSTimer *timer;
 @property (nonatomic, assign) id<PullToRefreshViewDelegate> delegate;
 @property (nonatomic, assign) NSTimeInterval timeout;
 @property (nonatomic, retain) UILabel *lastUpdatedLabel;

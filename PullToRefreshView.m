@@ -46,6 +46,7 @@
 @end
 
 @implementation PullToRefreshView
+@synthesize dateFormatter;
 @synthesize delegate;
 @synthesize scrollView;
 @synthesize lastUpdatedLabel, statusLabel, arrowImage, activityView;
@@ -308,12 +309,12 @@ static const CGFloat kScrollLimit = 65.0f;
 
 - (void)finishedLoading {
     if (state == PullToRefreshViewStateLoading) {
-        [timer invalidate];
         [self dismissView];
     }
 }
 
 - (void)dismissView {
+    [self stopTimer];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3f];
     [self setState:PullToRefreshViewStateNormal];
@@ -326,8 +327,13 @@ static const CGFloat kScrollLimit = 65.0f;
 
 - (void)startTimer {
     if (self.timeout > 0) {
-        timer = [[NSTimer scheduledTimerWithTimeInterval:self.timeout target:self selector:@selector(timerExpired:) userInfo:nil repeats:NO] retain];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:self.timeout target:self selector:@selector(timerExpired:) userInfo:nil repeats:NO];
     }
+}
+
+- (void)stopTimer {
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 - (void)timerExpired:(NSTimer*)theTimer {
@@ -339,9 +345,7 @@ static const CGFloat kScrollLimit = 65.0f;
 
 -(void)cleanUp {
     delegate = nil;
-    [timer invalidate];
-    [timer release];
-    timer = nil;
+    [self stopTimer];
 	[scrollView removeObserver:self forKeyPath:@"contentOffset"];
 	[scrollView removeObserver:self forKeyPath:@"contentSize"];
     self.scrollView = nil;
