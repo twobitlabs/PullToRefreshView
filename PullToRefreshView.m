@@ -338,7 +338,6 @@ static const CGFloat kScrollLimit = 65.0f;
 #pragma mark Lifecycle
 
 -(void)removeFromSuperview {
-    [super removeFromSuperview];
     delegate = nil;    
     [timer invalidate];
     [timer release];
@@ -346,6 +345,7 @@ static const CGFloat kScrollLimit = 65.0f;
 	[scrollView removeObserver:self forKeyPath:@"contentOffset"];
 	[scrollView removeObserver:self forKeyPath:@"contentSize"];
     scrollView = nil;
+    [super removeFromSuperview];    
 }
 
 #pragma mark -
