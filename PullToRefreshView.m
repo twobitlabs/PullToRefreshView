@@ -344,7 +344,7 @@ static const CGFloat kScrollLimit = 65.0f;
     timer = nil;
 	[scrollView removeObserver:self forKeyPath:@"contentOffset"];
 	[scrollView removeObserver:self forKeyPath:@"contentSize"];
-    scrollView = nil;
+    self.scrollView = nil;
 }
 
 -(void)removeFromSuperview {
