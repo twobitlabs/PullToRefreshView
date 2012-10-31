@@ -74,6 +74,20 @@ static const CGFloat kScrollLimit = 65.0f;
     [UIView commitAnimations];
 }
 
+-(void)setClearBackgroundAndWhiteText {
+    self.backgroundColor = [UIColor clearColor];
+    [self setWhiteText];
+}
+
+-(void)setWhiteText {
+    self.arrowImage.contents = (id) [UIImage imageNamed:@"white-arrow"].CGImage;
+    self.lastUpdatedLabel.textColor = [UIColor whiteColor];
+    self.lastUpdatedLabel.shadowColor = [UIColor lightGrayColor];
+    self.statusLabel.textColor = [UIColor whiteColor];
+    self.statusLabel.shadowColor = [UIColor lightGrayColor];
+    self.activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+}
+
 - (id)initWithScrollView:(UIScrollView *)scroll {
     return [self initWithScrollView:scroll atBottom:NO];
 }
