@@ -82,9 +82,9 @@ static const CGFloat kScrollLimit = 65.0f;
 -(void)setWhiteText {
     self.arrowImage.contents = (id) [UIImage imageNamed:@"white-arrow"].CGImage;
     self.lastUpdatedLabel.textColor = [UIColor whiteColor];
-    self.lastUpdatedLabel.shadowColor = [UIColor lightGrayColor];
+    self.lastUpdatedLabel.shadowColor = [UIColor darkGrayColor];
     self.statusLabel.textColor = [UIColor whiteColor];
-    self.statusLabel.shadowColor = [UIColor lightGrayColor];
+    self.statusLabel.shadowColor = [UIColor darkGrayColor];
     self.activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
 }
 
