@@ -41,19 +41,19 @@ typedef enum {
 	PullToRefreshViewState state;
 }
 
-@property (nonatomic, retain) UIScrollView *scrollView;
-@property (nonatomic, retain) NSTimer *timer;
-@property (nonatomic, assign) id<PullToRefreshViewDelegate> delegate;
+@property (nonatomic, weak) UIScrollView *scrollView;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, weak) id<PullToRefreshViewDelegate> delegate;
 @property (nonatomic, assign) NSTimeInterval timeout;
-@property (nonatomic, retain) UILabel *lastUpdatedLabel;
-@property (nonatomic, retain) UILabel *statusLabel;
-@property (nonatomic, retain) CALayer *arrowImage;
-@property (nonatomic, retain) UIActivityIndicatorView *activityView;
+@property (nonatomic, strong) UILabel *lastUpdatedLabel;
+@property (nonatomic, strong) UILabel *statusLabel;
+@property (nonatomic, strong) CALayer *arrowImage;
+@property (nonatomic, strong) UIActivityIndicatorView *activityView;
 @property (assign, readonly) BOOL isBottom;
 @property (nonatomic, copy) NSString *pullToRefreshText;
 @property (nonatomic, copy) NSString *releaseToRefreshText;
 @property (nonatomic, copy) NSString *loadingText;
-@property (readwrite, nonatomic, retain) NSDateFormatter *dateFormatter;
+@property (readwrite, nonatomic, strong) NSDateFormatter *dateFormatter;
 
 
 - (void)refreshLastUpdatedDate;

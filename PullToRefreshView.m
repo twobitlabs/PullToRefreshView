@@ -110,7 +110,7 @@ static const CGFloat kScrollLimit = 65.0f;
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.backgroundColor = [UIColor colorWithRed:226.0/255.0 green:231.0/255.0 blue:237.0/255.0 alpha:1.0];
         
-		self.lastUpdatedLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0f, visibleBottom - 30.0f, self.frame.size.width, 20.0f)] autorelease];
+		self.lastUpdatedLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, visibleBottom - 30.0f, self.frame.size.width, 20.0f)];
 		self.lastUpdatedLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.lastUpdatedLabel.font = [UIFont systemFontOfSize:12.0f];
 		self.lastUpdatedLabel.textColor = TEXT_COLOR;
@@ -120,7 +120,7 @@ static const CGFloat kScrollLimit = 65.0f;
 		self.lastUpdatedLabel.textAlignment = UITextAlignmentCenter;
 		[self addSubview:self.lastUpdatedLabel];
         
-		self.statusLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0f, visibleBottom - 48.0f, self.frame.size.width, 20.0f)] autorelease];
+		self.statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, visibleBottom - 48.0f, self.frame.size.width, 20.0f)];
 		self.statusLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.statusLabel.font = [UIFont boldSystemFontOfSize:13.0f];
 		self.statusLabel.textColor = TEXT_COLOR;
@@ -130,7 +130,7 @@ static const CGFloat kScrollLimit = 65.0f;
 		self.statusLabel.textAlignment = UITextAlignmentCenter;
 		[self addSubview:self.statusLabel];
         
-		self.arrowImage = [[[CALayer alloc] init] autorelease];
+		self.arrowImage = [[CALayer alloc] init];
         UIImage *arrow = [UIImage imageNamed:@"arrow"];
 		self.arrowImage.contents = (id) arrow.CGImage;
 		self.arrowImage.frame = CGRectMake(25.0f, visibleBottom - kViewHeight + 5.0f, arrow.size.width, arrow.size.height);
@@ -145,7 +145,7 @@ static const CGFloat kScrollLimit = 65.0f;
         
 		[self.layer addSublayer:self.arrowImage];
         
-        self.activityView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
+        self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 		self.activityView.frame = CGRectMake(30.0f, visibleBottom - 38.0f, 20.0f, 20.0f);
 		[self addSubview:self.activityView];
         
@@ -192,8 +192,7 @@ static const CGFloat kScrollLimit = 65.0f;
 
 - (void)setDateFormatter:(NSDateFormatter *)formatter {
     if (dateFormatter != formatter) {
-        [dateFormatter release];
-        dateFormatter = [formatter retain];
+        dateFormatter = formatter;
         [self refreshLastUpdatedDate];
     }
 }
@@ -375,15 +374,6 @@ static const CGFloat kScrollLimit = 65.0f;
   
 - (void)dealloc {
     [self cleanUp];
-    [arrowImage release];
-    [activityView release];
-    [statusLabel release];
-    [lastUpdatedLabel release];
-    [pullToRefreshText release];
-    [releaseToRefreshText release];
-    [loadingText release];
-    [dateFormatter release];
-    [super dealloc];
 }
 
 @end
