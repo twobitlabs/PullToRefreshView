@@ -117,7 +117,7 @@ static const CGFloat kScrollLimit = 65.0f;
 		self.lastUpdatedLabel.shadowColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
 		self.lastUpdatedLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		self.lastUpdatedLabel.backgroundColor = [UIColor clearColor];
-		self.lastUpdatedLabel.textAlignment = UITextAlignmentCenter;
+		self.lastUpdatedLabel.textAlignment = NSTextAlignmentCenter;
 		[self addSubview:self.lastUpdatedLabel];
         
 		self.statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, visibleBottom - 48.0f, self.frame.size.width, 20.0f)];
@@ -127,7 +127,7 @@ static const CGFloat kScrollLimit = 65.0f;
 		self.statusLabel.shadowColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
 		self.statusLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		self.statusLabel.backgroundColor = [UIColor clearColor];
-		self.statusLabel.textAlignment = UITextAlignmentCenter;
+		self.statusLabel.textAlignment = NSTextAlignmentCenter;
 		[self addSubview:self.statusLabel];
         
 		self.arrowImage = [[CALayer alloc] init];
