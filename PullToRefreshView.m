@@ -263,6 +263,9 @@ static const CGFloat kScrollLimit = 65.0f;
         scrollView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, kViewHeight, 0.0f);
     } else {
         scrollView.contentInset = UIEdgeInsetsMake(kViewHeight, 0.0f, 0.0f, 0.0f);
+        // for some reason the contentOffset often gets updated to scroll the view down when we release, so reset it to 0 when we park
+        // this hides the park, but it looks better
+        [scrollView setContentOffset:CGPointZero animated:YES];
     }
 }
 
